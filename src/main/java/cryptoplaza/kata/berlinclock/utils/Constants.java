@@ -1,5 +1,9 @@
 package cryptoplaza.kata.berlinclock.utils;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Constants {
 
     public static class ColorLampBerlinClock {
