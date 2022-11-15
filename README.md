@@ -1,2 +1,2 @@
 # berlinclock
-Berlin Clock kata
+Berlin Clock kata aplicando TDD
