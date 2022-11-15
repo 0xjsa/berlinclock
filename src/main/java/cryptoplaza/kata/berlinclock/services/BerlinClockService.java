@@ -5,5 +5,7 @@ public interface BerlinClockService {
 
    String getLampSeconds(Integer second);
 
+   String getLampHourFirstRow(Integer hour);
 
+   String getLampHourSecondRow(Integer hour);
 }

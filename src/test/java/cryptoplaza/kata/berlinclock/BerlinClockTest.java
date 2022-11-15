@@ -40,4 +40,35 @@ class BerlinClockTest {
         assertEquals(String.valueOf(OFF), secondLamp);
     }
 
+    @Test
+    void testFourLampForFirstRowHour() {
+        var firstRowHour = berlinClockService.getLampHourFirstRow(8);
+        assertEquals(4, firstRowHour.length());
+    }
+
+    @Test
+    void testFirstRowHour() {
+        assertEquals("OOOO", berlinClockService.getLampHourFirstRow(0));
+        assertEquals("ROOO", berlinClockService.getLampHourFirstRow(6));
+        assertEquals("RROO", berlinClockService.getLampHourFirstRow(11));
+        assertEquals("RRRR", berlinClockService.getLampHourFirstRow(23));
+    }
+
+    @Test
+    void testFourLampForSecondRowHour() {
+        var firstRowHour = berlinClockService.getLampHourSecondRow(8);
+        assertEquals(4, firstRowHour.length());
+    }
+
+    @Test
+    void testSecondRowHour(){
+        assertEquals("OOOO", berlinClockService.getLampHourSecondRow(0));
+        assertEquals("ROOO", berlinClockService.getLampHourSecondRow(6));
+        assertEquals("ROOO", berlinClockService.getLampHourSecondRow(11));
+        assertEquals("RRRO", berlinClockService.getLampHourSecondRow(23));
+    }
+
+
+
+
 }
